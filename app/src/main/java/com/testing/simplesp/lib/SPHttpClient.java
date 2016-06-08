@@ -114,27 +114,12 @@ public class SPHttpClient {
             }
             conn.connect();
             if (conn.getResponseCode() == 200) {
-                ThreadUtils.getInstance().execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            listener.onSuccess(StreamUtils.getString(conn.getInputStream()));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
+                listener.onSuccess(StreamUtils.getString(conn.getInputStream()));
             } else
                 throw new IOException();
         } catch (final IOException e) {
             e.printStackTrace();
-            ThreadUtils.getInstance().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    listener.onError(e);
-                }
-            });
-
+            listener.onError(e);
         }
     }
 

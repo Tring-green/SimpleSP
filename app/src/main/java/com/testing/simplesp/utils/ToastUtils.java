@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.testing.simplesp.lib.SP;
-import com.testing.simplesp.lib.SPHTTPManager;
+import com.testing.simplesp.lib.manager.SPHTTPManager;
 
 /**
  * Created by admin on 2016/3/16.

@@ -1,6 +1,6 @@
 package com.testing.simplesp.utils;
 
-import com.testing.simplesp.lib.AsyncManager;
+import com.testing.simplesp.lib.manager.AsyncManager;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

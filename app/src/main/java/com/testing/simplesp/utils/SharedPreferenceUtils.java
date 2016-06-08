@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.testing.simplesp.lib.SP;
-import com.testing.simplesp.lib.SPHTTPManager;
+import com.testing.simplesp.lib.manager.SPHTTPManager;
 
 /**
  * Created by admin on 2016/2/18.

@@ -62,7 +62,6 @@ public class DetailDocumentActivity extends AppCompatActivity {
             //不展示原网页
             int position = getIntent().getIntExtra("currentPosition", 0);
             Data data = DocumentAdapter.mValues.get(position);
-            System.out.println(position + "--" + data.getTitle());
             tv_title.setText(data.getTitle());
             tv_unit.setText(data.getUnit());
             tv_content.setText(data.getContent());

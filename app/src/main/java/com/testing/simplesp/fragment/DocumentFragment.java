@@ -14,9 +14,9 @@ import android.view.ViewGroup;
 import com.testing.simplesp.R;
 import com.testing.simplesp.adapter.DocumentAdapter;
 import com.testing.simplesp.base.BaseFragment;
-import com.testing.simplesp.db.DocumentItemDao;
+import com.testing.simplesp.db.DocumentDao;
 import com.testing.simplesp.domain.DocumentItem;
-import com.testing.simplesp.lib.SPDocumentManager;
+import com.testing.simplesp.lib.manager.SPDocumentManager;
 import com.testing.simplesp.utils.SharedPreferenceUtils;
 import com.testing.simplesp.utils.ThreadUtils;
 
@@ -28,7 +28,7 @@ public class DocumentFragment extends BaseFragment {
     private static final String ARG_COLUMN_COUNT = "column-count";
 
     private int mColumnCount = 1;
-    public  RecyclerView mRv_list;
+    public RecyclerView mRv_list;
     private View mView;
     public static SwipeRefreshLayout mSrl;
     public static Activity mActivity;
@@ -44,6 +44,7 @@ public class DocumentFragment extends BaseFragment {
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -63,6 +64,7 @@ public class DocumentFragment extends BaseFragment {
         initView();
         return mView;
     }
+
     private void initView() {
         mActivity = getActivity();
         mRv_list = (RecyclerView) mView.findViewById(R.id.rv_list);
@@ -72,17 +74,18 @@ public class DocumentFragment extends BaseFragment {
         } else {
             mRv_list.setLayoutManager(new GridLayoutManager(mActivity, mColumnCount));
         }
+        mSrl.setRefreshing(true);
         int currentId = SharedPreferenceUtils.getInstance().getInt("currentId");
         if (currentId != 0) {
-            List<DocumentItem.Data> list = DocumentItemDao.getInstance().getDocumentItemById(currentId);
+            List<DocumentItem.Data> list = DocumentDao.getInstance().getDocumentItemById(currentId);
             synchronized (DocumentAdapter.class) {
                 DocumentAdapter.mValues.addAll(list);
             }
+            mSrl.setRefreshing(false);
         }
         mAdapter = new DocumentAdapter(mActivity);
         mRv_list.setAdapter(mAdapter);
         mSrl.setColorSchemeColors(Color.GRAY);
-        mSrl.setRefreshing(true);
         //下拉刷新逻辑
         mSrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -103,7 +106,6 @@ public class DocumentFragment extends BaseFragment {
                     ThreadUtils.getInstance().execute(new Runnable() {
                         @Override
                         public void run() {
-                            System.out.println(DocumentAdapter.LOADING_SIGN);
                             if (DocumentAdapter.LOADING_SIGN == DocumentAdapter.LOADING_DOWN)
                                 mAdapter.addMore();
                         }

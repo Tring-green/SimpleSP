@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:background="@drawable/tvbar"
+        android:name="com.example.schoolpa.Fragment.ScheduleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:visibility="visible"
+        >
+
+        <TextView
+            android:id="@+id/tv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/et_input"
+            android:layout_centerHorizontal="true"
+            android:text="请输入学号进行绑定"
+            android:textSize="22sp"
+            />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:hint="请输入学号"
+            android:inputType="number"
+            android:minWidth="200sp"
+            android:textSize="22sp"
+            />
+
+        <Button
+            android:id="@+id/bt_bind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_input"
+            android:layout_centerHorizontal="true"
+            android:text="绑定"
+            android:textSize="18sp"
+            />
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        />
+</FrameLayout>

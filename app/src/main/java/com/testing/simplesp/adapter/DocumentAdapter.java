@@ -14,10 +14,10 @@ import com.testing.simplesp.R;
 import com.testing.simplesp.activity.DetailDocumentActivity;
 import com.testing.simplesp.base.BaseAdapter;
 import com.testing.simplesp.base.BaseViewHolder;
-import com.testing.simplesp.db.DocumentItemDao;
+import com.testing.simplesp.db.DocumentDao;
 import com.testing.simplesp.domain.DocumentItem.Data;
 import com.testing.simplesp.fragment.DocumentFragment;
-import com.testing.simplesp.lib.SPDocumentManager;
+import com.testing.simplesp.lib.manager.SPDocumentManager;
 import com.testing.simplesp.utils.ThreadUtils;
 
 import java.util.ArrayList;
@@ -119,8 +119,7 @@ public class DocumentAdapter extends BaseAdapter {
     public void addMore() {
         DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_NOW;
         List<Data> newValues;
-        System.out.println(mValues.size());
-        newValues = mValues.size() == 0 ? null : DocumentItemDao.getInstance().getDocumentItemById(mValues.get
+        newValues = mValues.size() == 0 ? null : DocumentDao.getInstance().getDocumentItemById(mValues.get
                 (mValues.size() - 1).getId()-1);
         if (newValues == null) {
             SPDocumentManager.getInstance().More(SPDocumentManager.ADD_MORE, this);

@@ -26,6 +26,7 @@ public class SPDBOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL(SPDB.DocumentItem.SQL_CREATE_TABLE);
+		db.execSQL(SPDB.ScheduleItem.SQL_CREATE_TABLE);
 	}
 
 	@Override
