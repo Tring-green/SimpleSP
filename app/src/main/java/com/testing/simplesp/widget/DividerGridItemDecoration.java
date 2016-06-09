@@ -26,7 +26,7 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
         Random random = new Random();
         mList = new ArrayList<>();
         for (int i = 0; i < size; i++) {
-            mList.add(new int[]{40 + random.nextInt(80), 40 + random.nextInt(80),
+            mList.add(new int[]{80 + random.nextInt(80), 40 + random.nextInt(80),
                     40 + random.nextInt(80 + 30), 40 + random.nextInt(80)});
         }
     }

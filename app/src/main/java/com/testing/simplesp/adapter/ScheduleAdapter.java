@@ -1,11 +1,9 @@
 package com.testing.simplesp.adapter;
 
-import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.testing.simplesp.R;
@@ -13,7 +11,6 @@ import com.testing.simplesp.base.BaseAdapter;
 import com.testing.simplesp.base.BaseViewHolder;
 import com.testing.simplesp.domain.ScheduleItem;
 import com.testing.simplesp.lib.SP;
-import com.testing.simplesp.utils.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +34,6 @@ public class ScheduleAdapter extends BaseAdapter {
         addItem(createScheduleItem("三", "", "", "", 3));
         addItem(createScheduleItem("四", "", "", "", 4));
         addItem(createScheduleItem("五", "", "", "", 5));
-        // addItem(createScheduleItem("六", "", "", "", 6));
-        // addItem(createScheduleItem("日", "", "", "", 7));
         for (int i = COLUMN_COUNT; i <= COUNT - 1; i++) {
             addItem(createScheduleItem("", "", "", "", i));
         }
@@ -48,6 +43,7 @@ public class ScheduleAdapter extends BaseAdapter {
             mValues.add(i * COLUMN_COUNT, createScheduleItem(name, "", "", "", i * COLUMN_COUNT));
         }
     }
+
 
     public void setValues(List<ScheduleItem.Data> datas) {
         for (ScheduleItem.Data data : datas) {
@@ -82,11 +78,6 @@ public class ScheduleAdapter extends BaseAdapter {
         if (holder instanceof CommonViewHolder) {
             final CommonViewHolder commonViewHolder = (CommonViewHolder) holder;
             ScheduleItem.Data data = mValues.get(position);
-            if (TextUtils.isEmpty(data.name)) {
-                LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) commonViewHolder.mContentView.getLayoutParams();
-                params.height = CommonUtils.dip2px(SP.getContext(), 100);
-                commonViewHolder.mContentView.setLayoutParams(params);
-            }
             commonViewHolder.mContentView.setText(data.name);
             if (position == 0) {
 
@@ -123,10 +114,6 @@ public class ScheduleAdapter extends BaseAdapter {
             super(view);
             mView = view;
             mContentView = (TextView) view.findViewById(R.id.content);
-            //mContentView.setWidth(ScheduleFragment.mWidth / 6);
-            //mContentView.setLayoutParams(new LinearLayout.LayoutParams(ScheduleFragment.mWidth / 6, mContentView
-            //        .getHeight()));
-            //System.out.println(ScheduleFragment.mWidth / 6);
         }
 
         @Override

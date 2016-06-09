@@ -21,7 +21,6 @@ import com.testing.simplesp.base.BaseFragment;
 import com.testing.simplesp.db.ScheduleDao;
 import com.testing.simplesp.domain.ScheduleItem;
 import com.testing.simplesp.lib.manager.SPScheduleManager;
-import com.testing.simplesp.utils.CommonUtils;
 import com.testing.simplesp.utils.RegexUtils;
 import com.testing.simplesp.utils.SharedPreferenceUtils;
 import com.testing.simplesp.utils.StringUtils;
@@ -29,7 +28,9 @@ import com.testing.simplesp.utils.ToastUtils;
 import com.testing.simplesp.widget.DividerGridItemDecoration;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,8 +44,6 @@ public class ScheduleFragment extends BaseFragment {
     private ProgressBar mPb_loading;
     private RelativeLayout mRl_input;
     private ScheduleAdapter mAdapter;
-    public static int mWidth;
-    public static int mHeight;
 
     public ScheduleFragment() {
 
@@ -67,6 +66,7 @@ public class ScheduleFragment extends BaseFragment {
     private void initData() {
         String schedule = SharedPreferenceUtils.getInstance().getString("schedule");
         if (schedule != null) {
+            System.out.println(schedule);
             ScheduleItem item = new Gson().fromJson(schedule, ScheduleItem.class);
             List<ScheduleItem.Data> values = item.data;
             setAdapter(values);
@@ -75,9 +75,6 @@ public class ScheduleFragment extends BaseFragment {
     }
 
     private void initView() {
-        int[] widthAndHeight = CommonUtils.getWindowWidthAndHeight(getActivity());
-        mWidth = widthAndHeight[0];
-        mHeight = widthAndHeight[1];
         mRv_list = (RecyclerView) mView.findViewById(R.id.rv_list);
         mRv_list.setLayoutManager(new GridLayoutManager(getActivity(), ScheduleAdapter.COLUMN_COUNT));
         mBt_bind = (Button) mView.findViewById(R.id.bt_bind);
@@ -118,23 +115,49 @@ public class ScheduleFragment extends BaseFragment {
 
     private void handleData(List<ScheduleItem.Data> list) {
         List<ScheduleItem.Data> values = new ArrayList<>();
+        int pos;
+        String classPos;
+        String date;
+        String week;
         for (ScheduleItem.Data data : list) {
             ScheduleDao.getInstance().addScheduleItem(data);
-            String couClass = data.classroom;
-            String week = RegexUtils.RegexGroup(couClass, "周(.{1})", 1);
-            week = StringUtils.transWeek(week);
-            String date = RegexUtils.RegexGroup(couClass, "周(.{1})(.+?),", 2);
-            String classpos = RegexUtils.RegexGroup(couClass, "\\((.+?)\\)", 1);
-         
-            int pos = getPos(week, date);
-            data.pos = pos;
-            data.classpos = classpos;
-            data.date = date;
-            data.week = week;
-            values.add(data);
-
+            String[] couClasses = data.classroom.split(";");
+            Map<Integer, ScheduleItem.Data> map = new HashMap<>();
+            for (int i = 0; i < couClasses.length; i++) {
+                String couClass = couClasses[i];
+                week = RegexUtils.RegexGroup(couClass, "周(.{1})", 1);
+                week = StringUtils.transWeek(week);
+                date = RegexUtils.RegexGroup(couClass, "周(.{1})(.+?),", 2);
+                classPos = RegexUtils.RegexGroup(couClass, "\\((.+?)\\)", 1);
+                if (classPos == null)
+                    classPos = "";
+                pos = getPos(week, date);
+                ScheduleItem.Data judge = map.get(pos);
+                System.out.println("---------------");
+                //if(judge!=null)
+                //System.out.println(judge.name + " " + judge.pos);
+                String result = RegexUtils.RegexGroup(couClass, "(.{1})周(.{1})(.+?),", 1);
+                if (judge == null) {
+                    ScheduleItem.Data newInstance = ScheduleItem.Data.newInstance(data);
+                    newInstance.pos = pos;
+                    newInstance.classPos = classPos;
+                    newInstance.date = date;
+                    newInstance.week = week;
+                    //System.out.println(data.name + "-" + data.classPos);
+                    newInstance.name += result != null ? "(" + result + ")" + newInstance.classPos : newInstance.classPos;
+                    map.put(pos, newInstance);
+                } else {
+                    //System.out.println(judge.name + "-" + data.classPos);
+                    judge.name += result != null ? ";(" + result + ")" + classPos : classPos;
+                    map.put(pos, judge);
+                }
+            }
+            for (ScheduleItem.Data result : map.values()) {
+                values.add(result);
+            }
         }
         setAdapter(values);
+
         //将课程保存到本地
         ScheduleItem item = new ScheduleItem();
         item.data = values;

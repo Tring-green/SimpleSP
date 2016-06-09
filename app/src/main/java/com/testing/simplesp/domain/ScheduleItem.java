@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by admin on 2016/6/7.
  */
-public class ScheduleItem {
+public class ScheduleItem{
 
     public List<Data> data;
     public boolean flag;
@@ -23,15 +23,38 @@ public class ScheduleItem {
         public String comment;
         public int pos;
         public String week;
-        public String classpos;
+        public String classPos;
         public String date;
 
-        public Data(String couName, String week, String date, String classpos, int pos) {
+        public Data(String id, String name, String classes, String teacher, double credit, String checkType, String
+                classroom, String time, String creditType, String comment) {
+            this.id = id;
+            this.name = name;
+            this.classes = classes;
+            this.teacher = teacher;
+            this.credit = credit;
+            this.checkType = checkType;
+            this.classroom = classroom;
+            this.time = time;
+            this.creditType = creditType;
+            this.comment = comment;
+        }
+
+        public Data(String couName, String week, String date, String classPos, int pos) {
             this.name = couName;
             this.week = week;
             this.date = date;
-            this.classpos = classpos;
+            this.classPos = classPos;
             this.pos = pos;
         }
+
+        public static Data newInstance(Data original) {
+            Data data = new Data(original.id, original.name, original.classes, original.teacher,
+                    original.credit, original.checkType,original.classroom,original.time,
+                    original.creditType,original.comment);
+            return data;
+        }
     }
+
+
 }

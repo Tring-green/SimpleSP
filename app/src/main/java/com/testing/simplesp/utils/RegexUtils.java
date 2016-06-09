@@ -12,7 +12,7 @@ public class RegexUtils {
 		if (matcher.find()) {
 			return matcher.group(which);
 		}
-		return "Nothing!";
+		return null;
 	}
 
 	public static List<String> RegexGroups(String targetStr, String patternStr, int which) {
@@ -32,7 +32,7 @@ public class RegexUtils {
 		if (matcher.find()) {
 			return matcher.group();
 		}
-		return "Nothing!";
+		return null;
 	}
 
 }

@@ -8,7 +8,7 @@
         android:width="0.5dp"
         android:color="@android:color/black" />
     <!-- 圆角 -->
-    <corners android:radius="5dp" />
+    <corners android:radius="0.5dp" />
   <!--  &lt;!&ndash; 边距 &ndash;&gt;
     <padding
         android:bottom="10dp"
@@ -18,8 +18,8 @@
     <!-- 渐变 -->
     <gradient
         android:angle="180"
-        android:endColor="#eeffffff"
-        android:centerColor="#ffffffff"
-        android:startColor="#eeffffff" />
+        android:endColor="#ddffffff"
+        android:centerColor="#eeffffff"
+        android:startColor="#ddffffff" />
 
 </shape>

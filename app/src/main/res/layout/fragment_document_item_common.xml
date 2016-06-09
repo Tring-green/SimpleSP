@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/bar_item_document"
-    android:layout_margin="3dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
     >
 
     <TextView
