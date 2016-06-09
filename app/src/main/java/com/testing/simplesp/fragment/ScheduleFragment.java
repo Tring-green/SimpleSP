@@ -125,6 +125,7 @@ public class ScheduleFragment extends BaseFragment {
             week = StringUtils.transWeek(week);
             String date = RegexUtils.RegexGroup(couClass, "周(.{1})(.+?),", 2);
             String classpos = RegexUtils.RegexGroup(couClass, "\\((.+?)\\)", 1);
+         
             int pos = getPos(week, date);
             data.pos = pos;
             data.classpos = classpos;
