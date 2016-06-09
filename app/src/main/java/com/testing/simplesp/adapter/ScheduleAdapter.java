@@ -1,9 +1,11 @@
 package com.testing.simplesp.adapter;
 
+import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.testing.simplesp.R;
@@ -11,6 +13,7 @@ import com.testing.simplesp.base.BaseAdapter;
 import com.testing.simplesp.base.BaseViewHolder;
 import com.testing.simplesp.domain.ScheduleItem;
 import com.testing.simplesp.lib.SP;
+import com.testing.simplesp.utils.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +22,7 @@ import java.util.List;
  * Created by admin on 2016/6/8.
  */
 public class ScheduleAdapter extends BaseAdapter {
-    private static List<ScheduleItem.Data> mValues = new ArrayList<>();
+    public static List<ScheduleItem.Data> mValues = new ArrayList<>();
 
     public static final int ROW_COUNT = 7;
     public static final int COLUMN_COUNT = 6;
@@ -79,6 +82,11 @@ public class ScheduleAdapter extends BaseAdapter {
         if (holder instanceof CommonViewHolder) {
             final CommonViewHolder commonViewHolder = (CommonViewHolder) holder;
             ScheduleItem.Data data = mValues.get(position);
+            if (TextUtils.isEmpty(data.name)) {
+                LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) commonViewHolder.mContentView.getLayoutParams();
+                params.height = CommonUtils.dip2px(SP.getContext(), 100);
+                commonViewHolder.mContentView.setLayoutParams(params);
+            }
             commonViewHolder.mContentView.setText(data.name);
             if (position == 0) {
 

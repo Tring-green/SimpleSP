@@ -80,7 +80,6 @@ public class ScheduleFragment extends BaseFragment {
         mHeight = widthAndHeight[1];
         mRv_list = (RecyclerView) mView.findViewById(R.id.rv_list);
         mRv_list.setLayoutManager(new GridLayoutManager(getActivity(), ScheduleAdapter.COLUMN_COUNT));
-        mRv_list.addItemDecoration(new DividerGridItemDecoration(getActivity()));
         mBt_bind = (Button) mView.findViewById(R.id.bt_bind);
         mPb_loading = (ProgressBar) mView.findViewById(R.id.pb_loading);
         mRl_input = (RelativeLayout) mView.findViewById(R.id.rl_input);
@@ -146,6 +145,7 @@ public class ScheduleFragment extends BaseFragment {
         mAdapter = new ScheduleAdapter();
         mAdapter.setValues(values);
         mRv_list.setAdapter(mAdapter);
+        mRv_list.addItemDecoration(new DividerGridItemDecoration(ScheduleAdapter.mValues.size()));
         mPb_loading.setVisibility(View.INVISIBLE);
         mRv_list.setVisibility(View.VISIBLE);
     }
