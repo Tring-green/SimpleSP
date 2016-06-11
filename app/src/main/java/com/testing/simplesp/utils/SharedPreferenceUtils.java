@@ -22,7 +22,7 @@ public class SharedPreferenceUtils {
 
     public static SharedPreferenceUtils getInstance() {
         if (instance == null) {
-            synchronized (SPHTTPManager.class) {
+            synchronized (SharedPreferenceUtils.class) {
                 if (instance == null) {
                     instance = new SharedPreferenceUtils();
                 }

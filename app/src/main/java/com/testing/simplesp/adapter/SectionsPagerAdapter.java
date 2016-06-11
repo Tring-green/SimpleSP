@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.testing.simplesp.base.BaseFragment;
 import com.testing.simplesp.fragment.DocumentFragment;
+import com.testing.simplesp.fragment.ElectricityFragment;
 import com.testing.simplesp.fragment.ScheduleFragment;
 
 import java.util.ArrayList;
@@ -17,8 +18,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     public SectionsPagerAdapter(FragmentManager fm) {
         super(fm);
-        mFragmentList.add(DocumentFragment.newInstance(1));
+        mFragmentList.add(DocumentFragment.newInstance());
         mFragmentList.add(ScheduleFragment.newInstance());
+        mFragmentList.add(ElectricityFragment.newInstance());
     }
 
     @Override

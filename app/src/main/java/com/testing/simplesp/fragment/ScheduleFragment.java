@@ -66,7 +66,6 @@ public class ScheduleFragment extends BaseFragment {
     private void initData() {
         String schedule = SharedPreferenceUtils.getInstance().getString("schedule");
         if (schedule != null) {
-            System.out.println(schedule);
             ScheduleItem item = new Gson().fromJson(schedule, ScheduleItem.class);
             List<ScheduleItem.Data> values = item.data;
             setAdapter(values);
@@ -82,7 +81,7 @@ public class ScheduleFragment extends BaseFragment {
         mRl_input = (RelativeLayout) mView.findViewById(R.id.rl_input);
         mBt_bind.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 EditText et_input = (EditText) mView.findViewById(R.id.et_input);
                 final String stuNum = et_input.getText().toString();
                 if (!TextUtils.isEmpty(stuNum)) {
@@ -103,7 +102,9 @@ public class ScheduleFragment extends BaseFragment {
 
                                 @Override
                                 public void onError(int errorCode, String errorMessage) {
-
+                                    mPb_loading.setVisibility(View.INVISIBLE);
+                                    mRl_input.setVisibility(View.VISIBLE);
+                                    ToastUtils.getInstance().showTestShort(errorCode + ": " + errorMessage);
                                 }
                             });
                 } else {
@@ -133,7 +134,6 @@ public class ScheduleFragment extends BaseFragment {
                     classPos = "";
                 pos = getPos(week, date);
                 ScheduleItem.Data judge = map.get(pos);
-                System.out.println("---------------");
                 //if(judge!=null)
                 //System.out.println(judge.name + " " + judge.pos);
                 String result = RegexUtils.RegexGroup(couClass, "(.{1})周(.{1})(.+?),", 1);
@@ -144,7 +144,8 @@ public class ScheduleFragment extends BaseFragment {
                     newInstance.date = date;
                     newInstance.week = week;
                     //System.out.println(data.name + "-" + data.classPos);
-                    newInstance.name += result != null ? "(" + result + ")" + newInstance.classPos : newInstance.classPos;
+                    newInstance.name += result != null ? "(" + result + ")" + newInstance.classPos : newInstance
+                            .classPos;
                     map.put(pos, newInstance);
                 } else {
                     //System.out.println(judge.name + "-" + data.classPos);

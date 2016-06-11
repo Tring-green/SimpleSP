@@ -20,7 +20,7 @@ public class ToastUtils {
 
     public static ToastUtils getInstance() {
         if (instance == null) {
-            synchronized (SPHTTPManager.class) {
+            synchronized (ToastUtils.class) {
                 if (instance == null) {
                     instance = new ToastUtils();
                 }

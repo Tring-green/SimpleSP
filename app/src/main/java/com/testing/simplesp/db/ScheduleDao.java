@@ -24,11 +24,12 @@ public class ScheduleDao {
     private ScheduleDao() {
         mContext = SP.getContext();
         helper = SPDBOpenHelper.getInstance(mContext);
+
     }
 
     public static ScheduleDao getInstance() {
         if (instance == null) {
-            synchronized (SPDocumentManager.class) {
+            synchronized (ScheduleDao.class) {
                 if (instance == null) {
                     instance = new ScheduleDao();
                 }

@@ -1,6 +1,6 @@
 package com.testing.simplesp.utils;
 
-import com.testing.simplesp.lib.manager.AsyncManager;
+import com.testing.simplesp.lib.manager.SPAsyncManager;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -35,6 +35,6 @@ public class ThreadUtils {
     }
 
     public  void runOnUiThread(Runnable runnable) {
-        AsyncManager.getInstance().runOnUiThread(runnable);
+        SPAsyncManager.getInstance().runOnUiThread(runnable);
     }
 }

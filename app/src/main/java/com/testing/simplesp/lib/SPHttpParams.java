@@ -21,7 +21,7 @@ public class SPHttpParams {
     }
 
     public SPHttpParams(int connectTimeout, int readTimeout) {
-        this(connectTimeout, readTimeout, false, false);
+        this(connectTimeout, readTimeout, false, true);
     }
 
     public int getConnectTimeout() {

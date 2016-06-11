@@ -11,7 +11,7 @@ import com.testing.simplesp.domain.DocumentItem.Data;
 import com.testing.simplesp.fragment.DocumentFragment;
 import com.testing.simplesp.lib.SP;
 import com.testing.simplesp.lib.SPHttpParams;
-import com.testing.simplesp.lib.SPURL;
+import com.testing.simplesp.lib.SPUrl;
 import com.testing.simplesp.lib.callback.SPObjectCallBack;
 import com.testing.simplesp.utils.SharedPreferenceUtils;
 import com.testing.simplesp.utils.ThreadUtils;
@@ -70,7 +70,7 @@ public class SPDocumentManager {
         body.put("currentId", finalCurrentId + "");
         body.put("count", "20");
         SPHttpParams httpParams = new SPHttpParams(5000, 5000, true);
-        SPHTTPManager.getInstance().sendRequest(SPURL.URL_HTTP_DOCUMENT, "POST", httpParams, header, body, true,
+        SPHTTPManager.getInstance().sendRequest(SPUrl.URL_HTTP_DOCUMENT, "POST", httpParams, header, body, true,
                 new SPObjectCallBack<DocumentItem>() {
 
                     @Override

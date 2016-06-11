@@ -12,7 +12,9 @@ import android.widget.TextView;
 import com.testing.simplesp.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -20,6 +22,7 @@ import java.util.Random;
  */
 public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
 
+    Map<String, int[]> mMap = new HashMap<>();
     private List<int[]> mList;
 
     public DividerGridItemDecoration(int size) {
@@ -33,6 +36,7 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void onDraw(Canvas c, RecyclerView parent, State state) {
+        //System.out.println(parent.getChildAdapterPosition(parent.getChildAt(parent.getChildCount() - 1)));
         for (int i = 0; i < parent.getChildCount(); i++) {
             View child = parent.getChildAt(i);
             TextView content = (TextView) child.findViewById(R.id.content);

@@ -25,7 +25,6 @@ import java.util.List;
 
 public class DocumentFragment extends BaseFragment {
 
-    private static final String ARG_COLUMN_COUNT = "column-count";
 
     private int mColumnCount = 1;
     public RecyclerView mRv_list;
@@ -39,22 +38,15 @@ public class DocumentFragment extends BaseFragment {
 
 
     @SuppressWarnings("unused")
-    public static DocumentFragment newInstance(int columnCount) {
+    public static DocumentFragment newInstance() {
         DocumentFragment fragment = new DocumentFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
-
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
     }
 
     @Override
