@@ -23,7 +23,7 @@ import com.testing.simplesp.utils.ThreadUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DocumentAdapter extends BaseAdapter {
+public class DocumentAdapter extends BaseAdapter{
     private static final int COMMON_VIEW = 0;
     private static final int MORE_VIEW = 1;
     private static final int ERROR_VIEW = 2;

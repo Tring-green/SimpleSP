@@ -3,19 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/bar_item_document"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
     >
 
     <TextView
         android:id="@+id/unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_margin="5dp"
         android:text="发文单位"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@android:color/black"
         android:textAppearance="?attr/textAppearanceListItem"
         />
 
@@ -23,8 +21,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="2dp"
+        android:layout_margin="5dp"
         android:maxLines="2"
         android:text="正文标题"
         android:textAppearance="?attr/textAppearanceListItem"
@@ -34,8 +31,7 @@
         android:id="@+id/content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="2dp"
+        android:layout_margin="5dp"
         android:maxLines="4"
         android:text="正文梗概"
         android:textAppearance="?attr/textAppearanceListItem"

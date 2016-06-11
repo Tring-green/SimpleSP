@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorSilver"
     >
 
     <android.support.v4.widget.SwipeRefreshLayout
@@ -15,7 +16,6 @@
             android:id="@+id/rv_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
             />
 
     </android.support.v4.widget.SwipeRefreshLayout>

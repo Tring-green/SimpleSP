@@ -12,7 +12,7 @@ import com.testing.simplesp.fragment.ScheduleFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class SectionsPagerAdapter extends FragmentPagerAdapter{
 
     List<BaseFragment> mFragmentList = new ArrayList<>();
 
@@ -37,4 +37,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         return mFragmentList.get(position).getPageName();
     }
+
+
 }

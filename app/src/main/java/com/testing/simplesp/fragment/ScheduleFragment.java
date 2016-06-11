@@ -1,6 +1,8 @@
 package com.testing.simplesp.fragment;
 
 
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.testing.simplesp.R;
@@ -21,11 +24,12 @@ import com.testing.simplesp.base.BaseFragment;
 import com.testing.simplesp.db.ScheduleDao;
 import com.testing.simplesp.domain.ScheduleItem;
 import com.testing.simplesp.lib.manager.SPScheduleManager;
+import com.testing.simplesp.utils.ColorUtils;
 import com.testing.simplesp.utils.RegexUtils;
 import com.testing.simplesp.utils.SharedPreferenceUtils;
 import com.testing.simplesp.utils.StringUtils;
 import com.testing.simplesp.utils.ToastUtils;
-import com.testing.simplesp.widget.DividerGridItemDecoration;
+import com.testing.simplesp.widget.ViewBackgroundDecoration;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -170,7 +174,27 @@ public class ScheduleFragment extends BaseFragment {
         mAdapter = new ScheduleAdapter();
         mAdapter.setValues(values);
         mRv_list.setAdapter(mAdapter);
-        mRv_list.addItemDecoration(new DividerGridItemDecoration(ScheduleAdapter.mValues.size()));
+        mRv_list.addItemDecoration(new ViewBackgroundDecoration(new ViewBackgroundDecoration.onDrawListener() {
+            @Override
+            public Paint onDraw(Map<String, Paint> map, View child) {
+                Paint paint = new Paint();
+                TextView tv_content = (TextView) child.findViewById(R.id.content);
+                String content = tv_content.getText().toString();
+                if (TextUtils.isEmpty(content)) {
+                    paint.setColor(Color.GRAY);
+                    paint.setAlpha(80);
+                } else {
+                    if (map.containsKey(content)) {
+                        paint = map.get(content);
+                    } else {
+                        int[] color = ColorUtils.getInstance().getColorInexistent();
+                        paint.setARGB(color[0], color[1], color[2], color[3]);
+                        map.put(content, paint);
+                    }
+                }
+                return paint;
+            }
+        }));
         mPb_loading.setVisibility(View.INVISIBLE);
         mRv_list.setVisibility(View.VISIBLE);
     }
