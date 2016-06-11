@@ -67,6 +67,7 @@ public class DocumentFragment extends BaseFragment {
     }
 
     private void initView() {
+
         mActivity = getActivity();
 
         mRv_list = (RecyclerView) mView.findViewById(R.id.rv_list);

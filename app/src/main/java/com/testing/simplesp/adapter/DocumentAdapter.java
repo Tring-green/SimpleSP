@@ -83,6 +83,7 @@ public class DocumentAdapter extends BaseAdapter{
                     mActivity.startActivity(intent);
                 }
             });
+
         } else if (holder instanceof MoreViewHolder) {
             final MoreViewHolder moreViewHolder = (MoreViewHolder) holder;
             moreViewHolder.mLoadError.setVisibility(

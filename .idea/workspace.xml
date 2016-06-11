@@ -47,6 +47,11 @@
           <theme>@style/AppTheme.NoActionBar</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AndroidLogFilters">
@@ -55,28 +60,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70831cf9-240e-42cf-9495-7f24db55f5a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/ColorUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/widget/ViewBackgroundDecoration.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/widget/DividerGridItemDecoration.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/DetailDocumentActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/DetailDocumentActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/SectionsPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/SectionsPagerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/SPDBOpenHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/SPDBOpenHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/DocumentFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/DocumentFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/CommonUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/CommonUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_common.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_common.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_loading_more.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_loading_more.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPDocumentManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPDocumentManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_document.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_document.xml" />
     </list>
     <ignored path="SimpleSP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,24 +99,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DetailDocumentActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/DetailDocumentActivity.java">
+      <file leaf-file-name="SPDocumentManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPDocumentManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+              <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_detail_document.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_document.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="ElectricityFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9398734">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.27210885">
+              <caret line="151" column="36" selection-start-line="151" selection-start-column="36" selection-end-line="151" selection-end-column="36" />
+              <folding>
+                <element signature="e#4660#5337#0" expanded="true" />
+                <element signature="e#5336#5337#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedPreferenceUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/SharedPreferenceUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -1745,13 +1757,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/widget/GridSpacingItemDecoration.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/widget/ItemOffsetDecoration.java" />
-        <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/com/testing/simplesp/R.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/widget/DividerItemDecoration.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/SPDB.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/DetailDocumentActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_schedule_item_common.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/tvBar.xml" />
@@ -1765,10 +1772,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/bar_item_document.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/DocumentDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_document.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPScheduleManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPDocumentManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/SharedPreferenceUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/ToastUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/ScheduleDao.java" />
@@ -1782,20 +1787,27 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/domain/ElectricityItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_spinner_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_electricity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/widget/DividerGridItemDecoration.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/ColorUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_common.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_loading_more.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/widget/ViewBackgroundDecoration.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/SectionsPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/CommonUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/DocumentFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_document_item_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_document.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/menu/menu_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/DetailDocumentActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/SPDBOpenHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/DocumentFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/SPDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPDocumentManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java" />
       </list>
     </option>
   </component>
@@ -1858,7 +1870,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
@@ -1880,6 +1892,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleSP" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1954,14 +1988,68 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="fragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleSP" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simplesp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleSP" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simplesp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="activity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleSP" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="ProjectPane" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1972,7 +2060,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="238" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/SectionsPagerAdapter.java&#10;dfrag&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/DocumentFragment.java&#10;commu&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/utils/CommonUtils.java&#10;efra&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java&#10;eleman&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/lib/manager/SPEleManager.java&#10;scfr&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;sharep&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/utils/SharedPreferenceUtils.java&#10;scman&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/lib/manager/SPScheduleManager.java&#10;scfra&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;schead&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;sada&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;fradoic&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/res/layout/fragment_document_item_common.xml&#10;sca&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;sfrag&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;scada&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;frag&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;ada&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;scfrag&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;adapter&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java" />
+    <property name="SearchEverywhereHistoryKey" value="more&#9;PSI&#9;JAVA://com.testing.simplesp.lib.manager.SPDocumentManager#More&#10;docad&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java&#10;dfrag&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/DocumentFragment.java&#10;commu&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/utils/CommonUtils.java&#10;efra&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java&#10;eleman&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/lib/manager/SPEleManager.java&#10;scfr&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;sharep&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/utils/SharedPreferenceUtils.java&#10;scman&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/lib/manager/SPScheduleManager.java&#10;scfra&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;schead&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;sada&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;fradoic&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/res/layout/fragment_document_item_common.xml&#10;sca&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;sfrag&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;scada&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;frag&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;ada&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/ScheduleAdapter.java&#10;scfrag&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/fragment/ScheduleFragment.java&#10;adapter&#9;FILE&#9;file://E:/Users/Android/SimpleSP/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
@@ -1980,11 +2068,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Users\Android\SimpleSP\app\src\main\java\com\testing\simplesp" />
       <recent name="E:\Users\Android\SimpleSP\app\src\main\java\com\testing\simplesp\domain" />
       <recent name="E:\Users\Android\SimpleSP\app\src\main\res\drawable" />
       <recent name="E:\Users\Android\SimpleSP\app\src\main\res\layout" />
       <recent name="E:\Users\Android\SimpleSP\app\src\main\java\com\testing\simplesp\db" />
-      <recent name="E:\Users\Android\SimpleSP\app\src\main\java\com\testing\simplesp\domain\list" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.testing.simplesp.activity" />
@@ -1993,6 +2081,9 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.testing.simplesp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Users\Android\SimpleSP\app\src\main\res\menu" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.testing.simplesp.utils" />
@@ -2241,7 +2332,7 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -2306,7 +2397,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465608752765</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="完成双击返回顶部">
+      <created>1465619717503</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1465619717503</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2328,17 +2425,17 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3241491" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37727273" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47163695" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37727273" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3176661" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3063209" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7795786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27424243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72123176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2962121" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2771475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -2366,7 +2463,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+    <MESSAGE value="完成双击返回顶部" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成双击返回顶部" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2379,19 +2477,19 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java</url>
-          <line>124</line>
+          <line>125</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java</url>
-          <line>121</line>
+          <line>122</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPDocumentManager.java</url>
-          <line>51</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
@@ -2451,20 +2549,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bar_list_document.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056016598">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Programming/Java/jdk1.8.0_77/src.zip!/com/sun/corba/se/impl/interceptors/PINoOpHandlerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325688">
-          <caret line="131" column="22" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Programming/Android/sdk/sources/android-23/android/database/Cursor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58027524">
@@ -2503,25 +2587,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/SPDBOpenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPAsyncManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPDocumentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2659,7 +2728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2667,15 +2735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06818182">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/SharedPreferenceUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2739,7 +2798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33169532">
           <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2747,15 +2805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33169532">
           <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22689076">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2767,14 +2816,6 @@
             <element signature="e#47457#47458#0" expanded="false" />
             <element signature="e#47485#47486#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2818,10 +2859,10 @@
         <state vertical-scroll-proportion="0.5792208">
           <caret line="2007" column="12" selection-start-line="2007" selection-start-column="12" selection-end-line="2007" selection-end-column="57" />
           <folding>
-            <element signature="e#75504#75505#0" expanded="true" />
-            <element signature="e#75550#75551#0" expanded="true" />
-            <element signature="e#75624#75625#0" expanded="true" />
-            <element signature="e#75692#75693#0" expanded="true" />
+            <element signature="e#75504#75505#0" expanded="false" />
+            <element signature="e#75550#75551#0" expanded="false" />
+            <element signature="e#75624#75625#0" expanded="false" />
+            <element signature="e#75692#75693#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2853,37 +2894,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/DocumentFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5792208">
-          <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1516#1543#0" expanded="true" />
-            <element signature="e#4523#4524#0" expanded="true" />
-            <element signature="e#4599#4600#0" expanded="true" />
-            <element signature="e#4852#5179#0" expanded="true" />
-            <element signature="e#5178#5179#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/DetailDocumentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_document.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9398734">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state vertical-scroll-proportion="1.0674418">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/activity/DetailDocumentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.8448277">
+          <caret line="97" column="27" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44444445">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/SPDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/db/SPDBOpenHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.096774">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#839#840#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/DocumentFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/adapter/DocumentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/lib/manager/SPDocumentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/utils/SharedPreferenceUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/testing/simplesp/fragment/ElectricityFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27210885">
+          <caret line="151" column="36" selection-start-line="151" selection-start-column="36" selection-end-line="151" selection-end-column="36" />
+          <folding>
+            <element signature="e#4660#5337#0" expanded="true" />
+            <element signature="e#5336#5337#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

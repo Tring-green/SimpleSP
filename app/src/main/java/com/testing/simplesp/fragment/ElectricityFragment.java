@@ -150,25 +150,32 @@ public class ElectricityFragment extends BaseFragment {
             @Override
             public void onSuccess(Object list) {
                 mDataList = (List<ElectricityItem.Data>) list;
+                if (mDataList.size() == 0) {
+                    mPb_loading.setVisibility(View.INVISIBLE);
+                    mLl_input.setVisibility(View.VISIBLE);
+                    return;
+                }
+                showEle();
                 SharedPreferenceUtils.getInstance().putString("eleUse", new Gson().toJson(mDataList));
                 SharedPreferenceUtils.getInstance().putString("roomName", mRoomName);
                 SharedPreferenceUtils.getInstance().putString("buildingName", mBuildingName);
-                showEle();
             }
 
             @Override
             public void onError(int errorCode, String errorMessage) {
                 mPb_loading.setVisibility(View.INVISIBLE);
-                mLl_show.setVisibility(View.VISIBLE);
+                if (TextUtils.isEmpty(mRoomName)) {
+                    mLl_input.setVisibility(View.VISIBLE);
+                    mLl_show.setVisibility(View.INVISIBLE);
+                } else {
+                    mLl_input.setVisibility(View.INVISIBLE);
+                    mLl_show.setVisibility(View.VISIBLE);
+                }
             }
         });
     }
 
     private void showEle() {
-        if (mDataList.size() == 0) {
-            mPb_loading.setVisibility(View.INVISIBLE);
-            mLl_input.setVisibility(View.VISIBLE);
-        }
         mDate = new String[mDataList.size()];
         mSurplus = new Double[mDataList.size()];
         mYesUse = new Double[mDataList.size()];

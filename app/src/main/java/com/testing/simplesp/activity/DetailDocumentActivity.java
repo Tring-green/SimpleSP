@@ -2,6 +2,9 @@ package com.testing.simplesp.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -20,6 +23,7 @@ public class DetailDocumentActivity extends AppCompatActivity {
     private TextView tv_title;
     private TextView tv_unit;
     private TextView tv_content;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +78,24 @@ public class DetailDocumentActivity extends AppCompatActivity {
         tv_title = (TextView) findViewById(R.id.tv_title);
         tv_unit = (TextView) findViewById(R.id.tv_unit);
         tv_content = (TextView) findViewById(R.id.tv_content);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

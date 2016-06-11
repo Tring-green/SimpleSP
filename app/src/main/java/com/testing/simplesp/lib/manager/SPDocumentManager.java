@@ -48,7 +48,10 @@ public class SPDocumentManager {
     }
 
     public void More(final int more, final Object obj) {
-
+        List<Data> mValues = DocumentAdapter.mValues;
+        for (Data data : mValues) {
+            System.out.println(data.getId());
+        }
         int currentId = -1;
         if (more == LOAD_MORE) {
             currentId = SharedPreferenceUtils.getInstance().getInt("currentId");
@@ -111,7 +114,8 @@ public class SPDocumentManager {
 
                     @Override
                     public void onError(int errorCode, String errorMessage) {
-                        DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_NOW;
+                        DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_DOWN;
+
                         Log.d("SPDocumentManager", errorCode + " :" + errorMessage);
                         if (obj != null) {
                             if (obj instanceof SwipeRefreshLayout) {
