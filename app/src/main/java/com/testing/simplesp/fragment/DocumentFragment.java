@@ -89,7 +89,7 @@ public class DocumentFragment extends BaseFragment {
                     if (map.containsKey(content)) {
                         paint = map.get(content);
                     } else {
-                        int[] color = ColorUtils.getInstance().getColorInexistent();
+                        int[] color = ColorUtils.getInstance().createNewColor();
                         paint.setARGB(color[0], color[1], color[2], color[3]);
                         map.put(content, paint);
                     }

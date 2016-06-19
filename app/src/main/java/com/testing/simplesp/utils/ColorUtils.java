@@ -32,7 +32,7 @@ public class ColorUtils {
         return instance;
     }
 
-    public int[] getColorInexistent() {
+    public int[] createNewColor() {
         Random random = new Random();
         int[] ints = new int[4];
         do {

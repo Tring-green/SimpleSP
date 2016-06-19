@@ -62,7 +62,7 @@ public class SPEleManager {
         Map<String, String> body = new HashMap<>();
         body.put("buildingName", buildingName);
         body.put("roomName", roomName);
-        SPHTTPManager.getInstance().sendRequest(SPUrl.URL_HTTP_ELECTRICITY_ELE, "post",
+        SPHTTPManager.getInstance().sendRequest(SPUrl.URL_HTTP_ELECTRICITY, "post",
                 new SPHttpParams(5000, 5000, true), null, body, true, new SPObjectCallBack<ElectricityItem>() {
                     @Override
                     public void onSuccess(ElectricityItem buildingName) {
@@ -80,7 +80,6 @@ public class SPEleManager {
 
     public interface SPELECallBack {
         void onSuccess(Object list);
-
         void onError(int errorCode, String errorMessage);
     }
 }

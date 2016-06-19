@@ -48,39 +48,34 @@ public class SPDocumentManager {
     }
 
     public void More(final int more, final Object obj) {
-        List<Data> mValues = DocumentAdapter.mValues;
-        for (Data data : mValues) {
-            System.out.println(data.getId());
-        }
         int currentId = -1;
-        if (more == LOAD_MORE) {
+        if (more == LOAD_MORE) {//如果是下拉刷新，则向服务器传当前公文通数据的最大ID
             currentId = SharedPreferenceUtils.getInstance().getInt("currentId");
             if (currentId > 0)
                 DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_DOWN;
         }
-        if (DocumentAdapter.mValues.size() != 0 && more == ADD_MORE)
+        if (DocumentAdapter.mValues.size() != 0 && more == ADD_MORE)//如果是加载更多，则传最小ID
             currentId = DocumentAdapter.mValues.get(DocumentAdapter.mValues.size() - 1).getId();
         final int finalCurrentId = currentId;
-
         Map<String, String> header = new HashMap<>();
-        if (more == LOAD_MORE) {
-            header.put("more", "0");
-        }
-        if (more == ADD_MORE) {
-            header.put("more", "1");
-        }
+        //设置请求消息头
+        String moreValue = more == LOAD_MORE ? "0" : "1";
+        header.put("more", moreValue);
+        //设置请求参数
         Map<String, String> body = new HashMap<>();
         body.put("currentId", finalCurrentId + "");
         body.put("count", "20");
+        //设置请求参数，true表示向服务器写入数据
         SPHttpParams httpParams = new SPHttpParams(5000, 5000, true);
         SPHTTPManager.getInstance().sendRequest(SPUrl.URL_HTTP_DOCUMENT, "POST", httpParams, header, body, true,
                 new SPObjectCallBack<DocumentItem>() {
 
                     @Override
-                    public void onSuccess(DocumentItem documentItem) {
-                        DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_NOW;
+                    public void onSuccess(DocumentItem documentItem) {//获取数据成功，并进行数据处理
+                        DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_NOW;//设置加载更多完成
                         List<Data> list = documentItem.getData();
                         if (more == LOAD_MORE) {
+                            //下拉刷新数据的处理
                             Collections.reverse(list);
                             synchronized (DocumentAdapter.class) {
                                 for (Data data : list) {
@@ -95,7 +90,7 @@ public class SPDocumentManager {
                                     ((SwipeRefreshLayout) obj).setRefreshing(false);
                             }
                         }
-                        if (more == ADD_MORE) {
+                        if (more == ADD_MORE) {//上划加载更多数据的处理
                             synchronized (DocumentAdapter.class) {
                                 for (Data data : list) {
                                     DocumentDao.getInstance().addDocumentItem(data);
@@ -114,6 +109,7 @@ public class SPDocumentManager {
 
                     @Override
                     public void onError(int errorCode, String errorMessage) {
+                        //处理错误信息
                         DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_DOWN;
 
                         Log.d("SPDocumentManager", errorCode + " :" + errorMessage);
@@ -131,13 +127,12 @@ public class SPDocumentManager {
                             @Override
                             public void run() {
 
-                        DocumentFragment.mAdapter.notifyDataSetChanged();
+                                DocumentFragment.mAdapter.notifyDataSetChanged();
                             }
                         });
                     }
 
                 });
-
     }
 
 

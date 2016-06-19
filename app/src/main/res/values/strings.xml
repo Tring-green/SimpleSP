@@ -13,4 +13,5 @@
     <string name="select_buildingName">请选择宿舍楼:</string>
     <string name="bind">绑定</string>
     <string name="input_roomName">请输入房间号</string>
+    <string name="title_activity_order">OrderActivity</string>
 </resources>

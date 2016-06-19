@@ -8,8 +8,8 @@ public class SPUrl {
 
     public final static String URL_HTTP_DOCUMENT = BASE_HTTP + "/Webs/document";
     public final static String URL_HTTP_SCHEDULE = BASE_HTTP + "/Webs/schedule";
+    public final static String URL_HTTP_ELECTRICITY = BASE_HTTP + "/Webs/electricity";
+
     public final static String URL_HTTP_ELECTRICITY_BUILDING_NAME =
             BASE_HTTP + "/Webs/electricity/buildingName";
-    public final static String URL_HTTP_ELECTRICITY_ELE =
-            BASE_HTTP + "/Webs/electricity/ele";
 }

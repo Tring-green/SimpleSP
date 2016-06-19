@@ -127,6 +127,9 @@ public class ScheduleFragment extends BaseFragment {
         for (ScheduleItem.Data data : list) {
             ScheduleDao.getInstance().addScheduleItem(data);
             String[] couClasses = data.classroom.split(";");
+            if (couClasses.length == 0 || TextUtils.isEmpty(couClasses[0])) {
+                continue;
+            }
             Map<Integer, ScheduleItem.Data> map = new HashMap<>();
             for (int i = 0; i < couClasses.length; i++) {
                 String couClass = couClasses[i];
@@ -138,8 +141,6 @@ public class ScheduleFragment extends BaseFragment {
                     classPos = "";
                 pos = getPos(week, date);
                 ScheduleItem.Data judge = map.get(pos);
-                //if(judge!=null)
-                //System.out.println(judge.name + " " + judge.pos);
                 String result = RegexUtils.RegexGroup(couClass, "(.{1})周(.{1})(.+?),", 1);
                 if (judge == null) {
                     ScheduleItem.Data newInstance = ScheduleItem.Data.newInstance(data);
@@ -177,17 +178,17 @@ public class ScheduleFragment extends BaseFragment {
         mRv_list.addItemDecoration(new ViewBackgroundDecoration(new ViewBackgroundDecoration.onDrawListener() {
             @Override
             public Paint onDraw(Map<String, Paint> map, View child) {
-                Paint paint = new Paint();
+                Paint paint = new Paint();//生成画笔
                 TextView tv_content = (TextView) child.findViewById(R.id.content);
                 String content = tv_content.getText().toString();
-                if (TextUtils.isEmpty(content)) {
+                if (TextUtils.isEmpty(content)) {//如果没有课，则将背景设置为黑色
                     paint.setColor(Color.GRAY);
                     paint.setAlpha(80);
-                } else {
+                } else {//否则，如果该课程名存在，则使用相同的颜色，否则生成新的颜色
                     if (map.containsKey(content)) {
                         paint = map.get(content);
                     } else {
-                        int[] color = ColorUtils.getInstance().getColorInexistent();
+                        int[] color = ColorUtils.getInstance().createNewColor();
                         paint.setARGB(color[0], color[1], color[2], color[3]);
                         map.put(content, paint);
                     }

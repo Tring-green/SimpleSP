@@ -23,15 +23,15 @@ import com.testing.simplesp.utils.ThreadUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DocumentAdapter extends BaseAdapter{
-    private static final int COMMON_VIEW = 0;
-    private static final int MORE_VIEW = 1;
-    private static final int ERROR_VIEW = 2;
+public class DocumentAdapter extends BaseAdapter {
+    private static final int COMMON_VIEW = 0;//公文通条目
+    private static final int MORE_VIEW = 1;//加载更多条目
+    private static final int ERROR_VIEW = 2;//错误条目
 
-    public static final int LOADING_NOW = 0;
-    public static final int LOADING_ERROR = 1;
-    public static final int LOADING_DOWN = 2;
-    public static final int LOADING_NO_VALUE = 3;
+    public static final int LOADING_NOW = 0;//正在加载更多
+    public static final int LOADING_ERROR = 1;//加载更多出现错误
+    public static final int LOADING_DOWN = 2;//加载完成
+    public static final int LOADING_NO_VALUE = 3;//加载后没有更多数据
 
     public static int LOADING_SIGN = LOADING_NO_VALUE;
     public static List<Data> mValues = new ArrayList<>();
@@ -118,20 +118,22 @@ public class DocumentAdapter extends BaseAdapter{
     }
 
     public void addMore() {
-        DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_NOW;
+        DocumentAdapter.LOADING_SIGN = DocumentAdapter.LOADING_NOW;//设置正在加载
         List<Data> newValues;
         newValues = mValues.size() == 0 ? null : DocumentDao.getInstance().getDocumentItemById(mValues.get
-                (mValues.size() - 1).getId()-1);
-        if (newValues == null) {
+                (mValues.size() - 1).getId() - 1);//从数据库中获取到公文通信息
+        if (newValues == null) {//如果数据库中没有公文通信息，则从服务器获取
             SPDocumentManager.getInstance().More(SPDocumentManager.ADD_MORE, this);
             Log.d("DocumentAdapter", "no value");
-        } else {
-            mValues.addAll(newValues);
+        } else {//否则将添加公文通信息
+            synchronized (DocumentAdapter.class) {
+                mValues.addAll(newValues);
+            }
             ThreadUtils.getInstance().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     notifyDataSetChanged();
-                    DocumentAdapter.LOADING_SIGN = LOADING_DOWN;
+                    DocumentAdapter.LOADING_SIGN = LOADING_DOWN;//设置加载完成
                 }
             });
         }

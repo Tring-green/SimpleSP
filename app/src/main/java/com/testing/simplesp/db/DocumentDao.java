@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.testing.simplesp.domain.DocumentItem.Data;
 import com.testing.simplesp.lib.SP;
-import com.testing.simplesp.lib.manager.SPDocumentManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +29,7 @@ public class DocumentDao {
 
     public static DocumentDao getInstance() {
         if (instance == null) {
-            synchronized (SPDocumentManager.class) {
+            synchronized (DocumentDao.class) {
                 if (instance == null) {
                     instance = new DocumentDao();
                 }

@@ -22,7 +22,7 @@ public class SP {
     public static Context getContext() {
         if (SP.context == null) {
             throw new RuntimeException(
-                    "请在Application的onCreate方法中调用SP.getInstance().init(context)初始化聊天引擎.");
+                    "请在Application的onCreate方法中调用SP.getInstance().init(context)初始化SP.");
         }
         return SP.context;
     }

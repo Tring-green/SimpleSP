@@ -17,7 +17,7 @@
         android:top="10dp" />
      渐变
     <gradient
-        android:angle="180"
+        android:angle="90"
         android:endColor="#FFFFF782"
         android:startColor="#13C7AF" />
 

@@ -39,7 +39,7 @@ public interface SPDB {
         String COLUMN_STUDENT = "student";
         String COLUMN_CHECKED= "checked";
         String SQL_CREATE_TABLE = "create table " + TABLE_NAME + " ("
-                + COLUMN_ID + " integer primary key, "
+                + COLUMN_ID + " text primary key, "
                 + COLUMN_NAME + " text," + COLUMN_CLASS + " text,"
                 + COLUMN_TEACHER + " text," + COLUMN_CREDIT + " double,"
                 + COLUMN_CHECK_TYPE + " text," + COLUMN_CLASSROOM + " text,"
